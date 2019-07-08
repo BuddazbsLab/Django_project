@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            {{ title|capfirst }}
+        {% endblock %}
+    </title>
+    {% block css %}
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700"
+              rel="stylesheet">
+        <link rel="stylesheet"
+              href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+              integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% endblock %}
+
+    {% block js %}
+    {% endblock %}
+</head>
+<body>
+<div class="container">
+    {% block menu %}
+    {% endblok %}
+
+    <div class="content">
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+</div>
+
+{% block footer %}
+    <div class="footer">
+        <div class="clear">
+
+        </div>
+
+    </div>
+
+</body>
+</html>
